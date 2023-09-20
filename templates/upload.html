@@ -16,43 +16,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<!-- <body>
-    <div class="container">
-        <div class="text">
-            <h1>Aqua<span>Vision</span></h1>
-            <p>Search water footprint</p>
-        </div>
-        <div class="card">
-            <form action="./object.html">
-                <p>Search water footprint by image</p>
-                <img src="../static/img/upload.png" id="upload" for="input-file">
-                <input type="file" accept="image/*" id="input-file">
-                <button type="submit" id="search" class="btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-
-        let upload = document.getElementById("upload");
-        let inputfile = document.getElementById("input-file");
-        let search = document.getElementById("search");
-
-        upload.onclick = function() {
-            inputfile.click();
-        }
-
-        inputfile.onchange = function() {
-            upload.src = URL.createObjectURL(inputfile.files[0]);
-        }
-
-        search.onclick = function() {
-            upload.src = "../static/img/searching.gif";
-        }
-
-    </script>
-</body> -->
-
 <body>
     <div class="container">
         <div class="text">
@@ -68,7 +31,7 @@
             </form>
         </div>
     </div>
-
+    <div id="header" hidden></div>
     <script>
         let upload = document.getElementById("upload");
         let inputfile = document.getElementById("input-file");
@@ -81,6 +44,12 @@
         inputfile.onchange = function() {
             upload.src = URL.createObjectURL(inputfile.files[0]);
         }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#header').load('header.html');
+        });
     </script>
 </body>
 
